@@ -1,0 +1,39 @@
+<div class="main_corner">
+<%=image_tag asset_path("show_06.jpg"), :width =>'660px' %>
+<div class="content">
+<h2 style='font-size: 24px; font-weight: 600; padding: 20px 0; border-bottom: dotted 2px #333;'>
+  欢迎您！ <%=session[:customer].name %>
+</h2>
+
+<% side_nav '会员登录', 'customer' %>
+
+<b>您的基本信息：</b>
+<table border="0">
+  <tr>
+    <th align="left" width="80px">姓名</th>
+    <th align="left" width="50px">性别</th>
+    <th align="left" width="120px">出生日期</th>
+    <th align="left" width="120px">联系电话</th>
+    <th align="left" width="120px">电子邮件</th>
+    <th></th>
+  </tr>
+
+  <tr>
+    <td><%= session[:customer].name %> </td>
+    <td><%= session[:customer].sex %> </td>
+    <td><%= session[:customer].birth %> </td>
+    <td><%= session[:customer].phone %> </td>
+    <td><%= session[:customer].email %> </td>
+    <td></td>
+  </tr>
+</table>
+
+<br />
+<h3>您可以进行一下操作:</h3>
+<p><%= link_to '修改基本信息', edit_customer_path(3), :class => 'link_btn' %></p>
+<p><%= link_to '在线预约洗衣', new_order_path, :class => 'link_btn' %></p>
+<p><%= link_to '退出系统', '/customer_logout', :class => 'link_btn' %></p>
+
+</div>
+<%=image_tag asset_path("show_08.jpg"), :width =>'660px' %>
+</div>

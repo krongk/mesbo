@@ -1,0 +1,47 @@
+<% title "产品中心" %>
+<% meta_keywords "欧美龙洗衣产品中心" %>
+<% meta_description "欧美龙洗衣产品中心"%>
+<% nav_bar [['首页', '/'],['产品中心', '/product_items']] %>
+<% side_news "产品中心" %>
+<% side_nav "产品中心", 'product' %>
+
+
+<script type="text/javascript">
+// $(document).ready(function(){
+//    //图片大图tips预览效果
+//    $('.tip').mouseover(function(){
+//       var $tip=$('<div id="tip"><div class="t_box"><div><s><i></i></s><img src="'+this.src+'" width="400px"/></div></div></div>');
+//       $('body').append($tip);
+//       $('#tip').show('fast');
+//    }).mouseout(function(){
+//       $('#tip').remove();
+//    }).mousemove(function(e){
+//       $('#tip').css({"top":(e.pageY-60)+"px","left":(e.pageX+30)+"px"})
+//    })
+
+//    //将图片设置为背景，以得到边框圆滑的效果
+//   $("#demo img").load(function() {
+//     $(this).wrap(function(){
+//       return '<span class="image-wrap ' + $(this).attr('class') + '" style="position:relative; display:inline-block; background:url(' + $(this).attr('src') + ') no-repeat center center; width: ' + $(this).width() + 'px; height: ' + $(this).height() + 'px;" />';
+//     });
+//     $(this).css("opacity","0");
+//   });
+// })
+</script>
+
+<div class="main_corner">
+  <%=image_tag asset_path("show_06.jpg"), :width =>'660px' %>
+  <div class="content" style="float: left; width: 618px; display: block;">
+
+    <div class="product_list_all">
+     <%=will_paginate @product_items, :next_label => "下一页", :prev_label => "上一页" %>
+      <ul>
+        <% @product_items.each do |item|%>
+          <li class="item_li"><%= link_to image_tag((item.image_path || asset_path("product.jpg")),:class => "tip"), product_item_path(item.id)%>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+   <%=image_tag asset_path("show_08.jpg"), :width =>'660px' %>
+</div>

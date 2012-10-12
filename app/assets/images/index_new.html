@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+*{
+	margin: 0; 
+	padding: 0;
+}
+body {
+	margin: 0; 
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #333;
+	font-family: "Microsoft YaHei", "Arial Unicode MS", "微软雅黑";
+	font-size: 12px;
+	background-color: #fff;
+	background-image: url(mr/01.jpg);
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+form{
+	margin: 0; 
+	padding: 0;
+}
+input{
+	margin: 0;
+	padding: 2px !important;
+	padding: 2px;
+}
+div, p, span{
+	margin: 0; 
+	padding: 0;
+}
+ul, ol, dl { 
+	margin: 0; 
+	padding: 0;
+}
+li {
+	list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0; 
+	padding: 10px;
+}
+a img {
+	border: none;
+}
+
+a:link {
+	color: #333;
+	text-decoration: none; 
+}
+a:visited {
+    color: #000;
+	text-decoration: none;
+}
+a:hover, a:active, a:focus {
+	color: #cc0000;
+	text-decoration: underline;
+}
+.write a{color: #ffffff;}
+.write a:visited {color: #ffffff;}
+.write a:hover, a:active, a:focus{color: #333;}
+.right_border {
+	border-right-width: 1px;
+	border-right-style: dashed;
+	border-right-color: #999;
+}
+.red_border {
+	background-color: #E6EBEF;
+	margin: 0px;
+	padding: 0px;
+	height: 2px;
+	width: 100%;
+}
+
+.omero #container {
+	width: 980px;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+	/*background-color: #e6ebef;*/
+	margin: 0 auto;
+	border-right: solid 1px #dddddd;
+	border-left: solid 1px #dddddd;	
+}
+.omero #header_banner {
+	margin: 0;
+	padding: 0;
+	height: 260px;
+}
+.omero #header_logo {
+	margin: 0;
+	padding: 0;
+	height: 160px !important;
+	height: 230px;
+	background-color: #06F;
+}
+#header_logo .content {
+	margin: 70px 0 0 0; 
+	padding: 0;
+	text-align: center;
+}
+#header_logo .form_logo {
+	float: right;
+	width: 270px;
+	position: relative;
+	text-align: right;
+	height: 90px;
+	z-index: 12;
+	overflow: hidden;
+	clear: both;
+	top: -90px;
+	margin-right: 8px;
+}
+.login_reg a {
+	background-color: #ddd;
+	margin: 0 0 0 3px;
+	padding: 3px 10px 2px 10px;
+}
+.login_reg a:hover {
+	color: #cc0000;
+	background-color: #333;
+	margin: 0 0 0 3px;
+	padding: 3px 10px 2px 10px;
+}
+.omero #header_nav {
+	padding: 0;
+	margin: 0px;
+	height: 48px;
+	background-color: #FF9;
+}
+#banner {
+	height: 690px;
+}
+.omero #mainContent {
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0;
+	padding-left: 10px;
+}
+/******side bar*******/
+#sidebar {
+	text-align: left;
+	margin: 0;
+	padding: 0 0 0 4px;
+}
+.corner_white{
+	margin: 0px;
+	padding: 0px;
+}
+.corner_white .bg_white{
+	background-image: url(3_09.jpg);
+	background-repeat: repeat-y;
+	margin: 0;
+	padding: 0 0 0 12px;
+}
+.news_list {
+	margin: 0px;
+	padding: 10px;
+	background-image: url(1_04.jpg);
+	background-repeat: repeat-x;
+}
+/******side bar*******/
+
+.omero #footer {
+	padding: 0 10px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+
+}
+.omero #footer p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+}
+-->
+</style>
+</head>
+
+<body class="omero">
+<div id="container">
+  <div id="header_banner">
+    <h1>欢迎进入欧美龙洗衣连锁</h1>
+    <p>我们将竭诚为您服务！</p>
+  <!-- end #top_banner --></div>
+  <div id="header_logo">
+     <div class="content"><img src="logo.png" width="399" height="90" alt="欧美龙" /></div>
+       <div class="form_logo">
+         <table width="95%" border="0" cellspacing="0" cellpadding="0">
+           <tr>
+             <td height="25"><span style="font-size:14px; color:#000;"><a href="/" style="font-size:14px; color:#222;">首页</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/pages" style="font-size:14px; color:#222;">网站地图</a></span></td>
+           </tr>
+           <tr>
+             <td align="right" valign="top" height="25">
+             <form id="form_search" name="form1" method="get" action="/news_items">
+               <table><tr><td>
+                 <input type="text" name="q" id="q" accesskey="a" size="25" />
+                 </td><td>
+                   <input type="submit" name="Submit" id="button" value="GO" />
+                 </td></tr></table>
+             </form>             </td>
+           </tr>
+           <tr>
+             <td align="right" valign="bottom" height="30"><div class="login_reg"><a href="/">会员登录</a>&nbsp;&nbsp;<a href="/">我要注册</a>&nbsp;&nbsp;<a href="/">联系我们</a></div></td>
+           </tr>
+         </table>
+     </div>
+  <!-- end #header_log --></div>
+   <div id="header_nav">
+     <div class="header_content">
+     wef     </div>
+  <!-- end #header_nav --></div>
+  
+   <div id="banner">
+     fwef
+  <!-- end #header_nav --><img src="1_04.jpg" width="100" height="262" /><img src="1_bander_bg.jpg" width="100" height="300" /></div>
+  
+  <div id="mainContent">
+   <table width="100%" height="600" bgcolor="#ddd" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="690px" align="left" valign="top">
+    <div style="margin:0; padding: 0 20px 0 0; background-color:#eee;">
+      <img src="mr/mr_10.png" width="670" height="290" /><br/>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="233" align="left" valign="top" class="right_border">
+        	<div style="margin:0; padding:0 10px;">
+            <div class="corner_white">
+       <img src="3_07.jpg" width="188" height="15" />
+       <div class="bg_white">
+          <div class="red_border"></div>
+             <div class="news_list2">
+             <h2 style="margin:0; padding: 0;"><span class="toto">>>></span>公司新闻</h2>
+                    <ul>
+                        <li><a href="/news_items/2">共创洗染业</a></li>
+                        <li></li>
+                        <li></li>
+                        <li><a href="/news_items/2">美好明天</a></li>
+                        <li><a href="/news_items/268">连锁店经营管理</a></li>
+                        <li><a href="/news_items/268">规范意见</a></li>
+                        <li><a href="/news_items/13">首届全</a></li>
+                        <li><a href="/news_items/13">国商业</a></li>
+                        <li><a href="/news_items/13">服务业技能...</a></li>
+                        <li><a href="/news_items/16">新的经营模</a></li>
+                        <li><a href="/news_items/16">式 新的盈利机会</a></li>
+                        <li><a href="/news_items/283">吉林省洗</a></li>
+                        <li><a href="/news_items/283">染行业</a></li>
+                        <li><a href="/news_items/283">消费纠纷...</a></li>
+                        <li><a href="/news_items/284">杭州市洗染业消费争议纠..</a></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li><a href="/news_items/284">.</a></li>
+                    </ul>
+                    <span class="more_black"><a href="/news_cates/1">更多&gt;&gt;</a></span>
+                  </div>
+                 </div>
+        <img src="3_11.jpg" width="181" height="12" />
+       <!-- end .white_corner --></div>
+            &nbsp;sdf  羊绒衣物即可干洗又可手洗，可按实际情况决定。 　　洗前.用专用洗剂与35ºC水搅拌均匀，将羊绒衣物放入浸泡15-30分钟后，在脏污处使用高浓度洗剂，采取挤揉的方法洗涤。其它部位轻轻拍揉。.用30ºC左右温水漂洗干净后，为使手感好，可放入适量的柔软剂。 .将洗后的水挤出后，...  </div>
+        </td>
+        <td width="233" align="left" valign="top" class="right_border">
+        	<div style="margin:0; padding:0 10px;"><img src="7_0.jpg" width="200" height="130" />&nbsp;sdf  羊绒衣物即可干洗又可手洗，可按实际情况决定。 　　洗前.用专用洗剂与35ºC水搅拌均匀，将羊绒衣物放入浸泡15-30分钟后，在脏污处使用高浓度洗剂，采取挤揉的方法洗涤。其它部位轻轻拍揉。.用30ºC左右温水漂洗干净后，为使手感好，可放入适量的柔软剂。 .将洗后的水挤出后，...  </div>
+        </td>
+        <td width="233" align="right" valign="top">
+        	<div style="margin:0; padding:0 0 0 10px;">&nbsp;
+        	  <img src="7_1.jpg" width="207" height="136" />sdf  羊绒衣物即可干洗又可手洗，可按实际情况决定。 　　洗前.用专用洗剂与35ºC水搅拌均匀，将羊绒衣物放入浸泡15-30分钟后，在脏污处使用高浓度洗剂，采取挤揉的方法洗涤。其它部位轻轻拍揉。.用30ºC左右温水漂洗干净后，为使手感好，可放入适量的柔软剂。 .将洗后的水挤出后，...
+<p> 羊绒衣物即可干洗又可手洗，可按实际情况决定。 　　洗前.用专用洗剂与35ºC水搅拌均匀，将羊绒衣物放入浸泡15-30分钟后，在脏污处使用高浓度洗剂，采取挤揉的方法洗涤。其它部位轻轻拍揉。.用30ºC左右温水漂洗干净后，为使手感好，可放入适量的柔软剂。 .将洗后的水挤出后，... </p>
+        	</div>
+        </td>
+      </tr>
+    </table>
+
+      
+     </div>
+    </td>
+    <td width="10px" class="right_border">&nbsp;</td>
+    <td align="right" valign="top" width="270">
+    <div id="sidebar">
+      <div class="corner_white">
+       <img src="3_07.jpg" width="250" height="14" />
+       <div class="bg_white">
+          <div class="red_border"></div>
+             <div class="news_list">
+             <h2 style="margin:0; padding: 0;"><span class="toto">>>></span>公司新闻</h2>
+                    <ul>
+                        <li><a href="/news_items/2">共创洗染业</a></li>
+                        <li></li>
+                        <li></li>
+                        <li><a href="/news_items/2">美好明天</a></li>
+                        <li><a href="/news_items/268">连锁店经营管理</a></li>
+                        <li><a href="/news_items/268">规范意见</a></li>
+                        <li><a href="/news_items/13">首届全</a></li>
+                        <li><a href="/news_items/13">国商业</a></li>
+                        <li><a href="/news_items/13">服务业技能...</a></li>
+                        <li><a href="/news_items/16">新的经营模</a></li>
+                        <li><a href="/news_items/16">式 新的盈利机会</a></li>
+                        <li><a href="/news_items/283">吉林省洗</a></li>
+                        <li><a href="/news_items/283">染行业</a></li>
+                        <li><a href="/news_items/283">消费纠纷...</a></li>
+                        <li><a href="/news_items/284">杭州市洗染业消费争议纠..</a></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li><a href="/news_items/284">.</a></li>
+                    </ul>
+                    <span class="more_black"><a href="/news_cates/1">更多&gt;&gt;</a></span>
+                  </div>
+                 </div>
+        <img src="3_11.jpg" width="250" height="14" />
+       <!-- end .white_corner --></div>
+       <!-- end #sidebar --></div>
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">&nbsp;</td>
+    <td class="right_border">&nbsp;</td>
+    <td align="right" valign="top">&nbsp;</td>
+  </tr>
+   </table>
+
+  <!-- end #mainContent --></div>
+  <div id="footer">
+    <p>Footer<img src="01.jpg" width="982" height="2370" /></p>
+  <!-- end #footer --></div>
+<!-- end #container --></div>
+</body>
+</html>

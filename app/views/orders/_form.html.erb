@@ -1,0 +1,58 @@
+<script type="text/javascript">
+$(document).ready(function(){
+  //name require
+  $("#order_phone").blur(function(){
+    if($("#order_phone").val() == ""){
+      $("#order_phone_tp").text("联系电话不能为空");
+    }else{
+      $("#order_phone_tp").text("");
+    }
+  });
+  //password require 
+  $("#order_address").blur(function(){
+    if($("#order_address").val() == ""){
+      $("#order_address_tp").text("地址不能为空");
+    }else{
+      $("#order_address_tp").text("");
+    }
+  });
+
+ });
+</script>
+
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table><tr><td width="260">
+    <%= f.label :phone, "联系电话：*" %><span id="order_phone_tp" class="error_tp"></span><br />
+    <%= f.text_field :phone %>
+    </td><td valign="bottom">请提供目前所使用的电话，方便我们及时与您取得联系！</td>
+  </td></tr><tr><td> <br/>
+    <%= f.label :address, "联系地址：*" %><span id="order_address_tp" class="error_tp"></span><br />
+    <%= f.text_field :address %>
+    </td><td valign="bottom">请详细填写，以方便我们正确取衣、送衣!</td>
+  </td></tr><tr><td> <br/>
+    <%= f.label :order_time, "预定日期：" %><br />
+    <%= f.date_select :order_time %>
+  </td></tr><tr><td> <br/>
+    <%= f.label :order_count, "衣服数量：" %><br />
+    <%= f.number_field :order_count, :value => 2 %>
+  </td></tr><tr><td colspan="2"> <br/>
+    <%= f.label :message, "备注信息：" %><br />
+    <%= f.text_field :message, :class => 'text' %>
+  </td></tr></table>
+  <br/>
+  <div class="actions">
+    <%= f.submit "预 订"%>
+  </div>
+<% end %>
