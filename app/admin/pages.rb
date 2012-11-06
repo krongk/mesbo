@@ -1,4 +1,7 @@
+#encoding: utf-8
 ActiveAdmin.register Page do
+  menu :label => "网页中心", :priority  => 2
+  menu :parent => "网页中心"
   filter :title
   filter :position
   filter :menu_match

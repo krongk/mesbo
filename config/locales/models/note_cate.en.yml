@@ -1,0 +1,12 @@
+---
+en:
+  active_record:
+    models:
+      note_cate: Note cate
+    attributes:
+      note_cate:
+        name: Name
+    errors:
+      note_cate: !!null 
+  helpers:
+    note_cate: !!null 

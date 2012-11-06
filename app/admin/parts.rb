@@ -1,4 +1,6 @@
+#encoding: utf-8
 ActiveAdmin.register Part do
+  menu :parent => '网页中心'
   filter :title
 
   index do

@@ -9,6 +9,10 @@
 - 差异化管理 
 - 投诉电话
 
+#信息街
+rails g scaffold note_cate name:string
+rails g scaffold note_item note_cate:references region:references city:references district:references address:string title:string description:text contact_name:string contact_phone:string contact_email:string contact_qq:string contact_other:string admin_password:string is_checked:boolean is_deleted:string level_count:integer
+
 ##What Rails on Web
   Rails on Web is a integration rails app which provide you to create a company site at a very short time.
   You only need to do the following steps:
@@ -110,6 +114,8 @@ rails g controller home index help site_map
    >rails g active_admin:resource customer
     >rails g active_admin:resource order
      >rails g active_admin:resource jiameng
+     >rails g active_admin:resource note_cate
+     >rails g active_admin:resource note_item
 
 10. integrate WYSWYG editor to ActiveAdmin
    1. add Gemfile

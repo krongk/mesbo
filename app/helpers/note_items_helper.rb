@@ -1,0 +1,2 @@
+module NoteItemsHelper
+end

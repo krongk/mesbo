@@ -1,5 +1,6 @@
 #encoding: utf-8
 ActiveAdmin.register ProductItem do
+  menu :parent => "洗涤产品"
   scope :"洗涤设备"
   scope :"干洗用品"
   scope :"水洗用品"

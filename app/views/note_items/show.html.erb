@@ -1,0 +1,99 @@
+<div class="main_corner">
+  <%=image_tag asset_path("show_06.jpg"), :width =>'660px' %>
+  <div class="content">
+    <h2 style='font-size: 24px; font-weight: 600; padding: 20px 0; border-bottom: dotted 2px #333;'>
+      洗衣行业分类信息汇总
+    </h2>
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Note cate:</b>
+  <%= @note_item.note_cate %>
+</p>
+
+<p>
+  <b>Region:</b>
+  <%= @note_item.region %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @note_item.city %>
+</p>
+
+<p>
+  <b>District:</b>
+  <%= @note_item.district %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @note_item.address %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @note_item.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @note_item.description %>
+</p>
+
+<p>
+  <b>Contact name:</b>
+  <%= @note_item.contact_name %>
+</p>
+
+<p>
+  <b>Contact phone:</b>
+  <%= @note_item.contact_phone %>
+</p>
+
+<p>
+  <b>Contact email:</b>
+  <%= @note_item.contact_email %>
+</p>
+
+<p>
+  <b>Contact qq:</b>
+  <%= @note_item.contact_qq %>
+</p>
+
+<p>
+  <b>Contact other:</b>
+  <%= @note_item.contact_other %>
+</p>
+
+<p>
+  <b>Admin password:</b>
+  <%= @note_item.admin_password %>
+</p>
+
+<p>
+  <b>Is checked:</b>
+  <%= @note_item.is_checked %>
+</p>
+
+<p>
+  <b>Is deleted:</b>
+  <%= @note_item.is_deleted %>
+</p>
+
+<p>
+  <b>Level count:</b>
+  <%= @note_item.level_count %>
+</p>
+
+
+<%= link_to 'Edit', edit_note_item_path(@note_item) %> |
+<%= link_to 'Back', note_items_path %>
+
+
+     
+  </div>
+   <%=image_tag asset_path("show_08.jpg"), :width =>'660px' %>
+</div>

@@ -1,4 +1,8 @@
 RailsOnWeb::Application.routes.draw do
+  resources :note_items
+
+  resources :note_cates
+
   resources :jiamengs
 
   resources :orders

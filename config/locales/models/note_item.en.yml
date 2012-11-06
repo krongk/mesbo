@@ -1,0 +1,27 @@
+---
+en:
+  active_record:
+    models:
+      note_item: Note item
+    attributes:
+      note_item:
+        note_cate: Note cate
+        region: Region
+        city: City
+        district: District
+        address: Address
+        title: Title
+        description: Description
+        contact_name: Contact name
+        contact_phone: Contact phone
+        contact_email: Contact email
+        contact_qq: Contact qq
+        contact_other: Contact other
+        admin_password: Admin password
+        is_checked: Is checked
+        is_deleted: Is deleted
+        level_count: Level count
+    errors:
+      note_item: !!null 
+  helpers:
+    note_item: !!null 

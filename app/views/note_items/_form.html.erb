@@ -1,0 +1,82 @@
+<%#encoding: utf-8 %>
+<script>
+    $(document).ready(function(){
+      $("#new_note_item").validate();
+      alert('aa');
+    });
+</script>
+
+<%= form_for(@note_item) do |f| %>
+  <% if @note_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@note_item.errors.count, "error") %> prohibited this note_item from being saved:</h2>
+
+      <ul>
+      <% @note_item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :note_cate %><br />
+    <%= f.text_field :note_cate %>
+  </div>
+  <div class="field">
+    <br/>
+    <%=render :partial => "/shops/dropdown_region_city_district", :locals =>{:style => 'no'}%>
+  </div>
+  <br/>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title, :class => 'required' %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :class => 'required' %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_name %><br />
+    <%= f.text_field :contact_name, :class => 'required' %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_phone %><br />
+    <%= f.text_field :contact_phone, :class => 'required' %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_email %><br />
+    <%= f.text_field :contact_email %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_qq %><br />
+    <%= f.text_field :contact_qq %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_other %><br />
+    <%= f.text_field :contact_other %>
+  </div>
+  <div class="field">
+    <%= f.label :admin_password %><br />
+    <%= f.text_field :admin_password %>
+  </div>
+  <div class="field">
+    <%= f.label :is_checked %><br />
+    <%= f.check_box :is_checked %>
+  </div>
+  <div class="field">
+    <%= f.label :is_deleted %><br />
+    <%= f.text_field :is_deleted %>
+  </div>
+  <div class="field">
+    <%= f.label :level_count %><br />
+    <%= f.number_field :level_count %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

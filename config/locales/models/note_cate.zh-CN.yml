@@ -1,0 +1,12 @@
+#encoding: utf-8
+zh-CN:
+  activerecord:
+    models:
+      note_cate: 信息类别
+    attributes:
+      note_cate:
+        name: 名称
+    errors:
+      note_cate: !!null 
+  helpers:
+    note_cate: !!null 

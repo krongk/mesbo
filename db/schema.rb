@@ -98,8 +98,7 @@ ActiveRecord::Schema.define(:version => 20111121165600003) do
 
   add_index "news_cates", ["name"], :name => "index_news_cates_on_name", :unique => true
 
-  create_table "news_items", :id => false, :force => true do |t|
-    t.integer  "id",                           :null => false
+  create_table "news_items", :force => true do |t|
     t.integer  "news_cate_id"
     t.integer  "sort_id",       :default => 0, :null => false
     t.string   "title",                        :null => false
@@ -112,13 +111,46 @@ ActiveRecord::Schema.define(:version => 20111121165600003) do
 
   add_index "news_items", ["news_cate_id"], :name => "index_news_items_on_news_cate_id"
 
+  create_table "note_cates", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "note_items", :force => true do |t|
+    t.integer  "note_cate_id"
+    t.integer  "region_id"
+    t.integer  "city_id"
+    t.integer  "district_id"
+    t.string   "address"
+    t.string   "title"
+    t.text     "description"
+    t.string   "contact_name"
+    t.string   "contact_phone"
+    t.string   "contact_email"
+    t.string   "contact_qq"
+    t.string   "contact_other"
+    t.string   "admin_password"
+    t.boolean  "is_checked"
+    t.string   "is_deleted"
+    t.integer  "level_count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "note_items", ["city_id"], :name => "index_note_items_on_city_id"
+  add_index "note_items", ["district_id"], :name => "index_note_items_on_district_id"
+  add_index "note_items", ["note_cate_id"], :name => "index_note_items_on_note_cate_id"
+  add_index "note_items", ["region_id"], :name => "index_note_items_on_region_id"
+
   create_table "orders", :force => true do |t|
     t.integer  "customer_id"
     t.string   "phone"
     t.string   "address"
-    t.string   "order_time"
+    t.date     "order_time"
     t.integer  "order_count"
     t.text     "message"
+    t.string   "code"
     t.string   "is_verfied",  :default => "n"
     t.string   "verfied_by"
     t.string   "note"

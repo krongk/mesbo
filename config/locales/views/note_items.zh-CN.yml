@@ -1,0 +1,20 @@
+---
+zh-CN:
+  note_items:
+    index:
+      title: Note items
+    show:
+      title: Note item
+    edit:
+      title: Editing Note item
+    new:
+      title: New Note item
+  flash:
+    note_items:
+      create:
+        notice: ! '%{resource_name} was successfully created.'
+      update:
+        notice: ! '%{resource_name} was successfully updated.'
+      destroy:
+        notice: ! '%{resource_name} was successfully deleted.'
+        alert: ! '%{resource_name} could not be deleted.'

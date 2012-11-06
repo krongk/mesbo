@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  note_cate: 
+  region: 
+  city: 
+  district: 
+  address: MyString
+  title: MyString
+  description: MyText
+  contact_name: MyString
+  contact_phone: MyString
+  contact_email: MyString
+  contact_qq: MyString
+  contact_other: MyString
+  admin_password: MyString
+  is_checked: false
+  is_deleted: MyString
+  level_count: 1
+
+two:
+  note_cate: 
+  region: 
+  city: 
+  district: 
+  address: MyString
+  title: MyString
+  description: MyText
+  contact_name: MyString
+  contact_phone: MyString
+  contact_email: MyString
+  contact_qq: MyString
+  contact_other: MyString
+  admin_password: MyString
+  is_checked: false
+  is_deleted: MyString
+  level_count: 1

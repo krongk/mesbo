@@ -1,0 +1,53 @@
+<h1>Listing note_items</h1>
+
+<table>
+  <tr>
+    <th>Note cate</th>
+    <th>Region</th>
+    <th>City</th>
+    <th>District</th>
+    <th>Address</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Contact name</th>
+    <th>Contact phone</th>
+    <th>Contact email</th>
+    <th>Contact qq</th>
+    <th>Contact other</th>
+    <th>Admin password</th>
+    <th>Is checked</th>
+    <th>Is deleted</th>
+    <th>Level count</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @note_items.each do |note_item| %>
+  <tr>
+    <td><%= note_item.note_cate %></td>
+    <td><%= note_item.region %></td>
+    <td><%= note_item.city %></td>
+    <td><%= note_item.district %></td>
+    <td><%= note_item.address %></td>
+    <td><%= note_item.title %></td>
+    <td><%= note_item.description %></td>
+    <td><%= note_item.contact_name %></td>
+    <td><%= note_item.contact_phone %></td>
+    <td><%= note_item.contact_email %></td>
+    <td><%= note_item.contact_qq %></td>
+    <td><%= note_item.contact_other %></td>
+    <td><%= note_item.admin_password %></td>
+    <td><%= note_item.is_checked %></td>
+    <td><%= note_item.is_deleted %></td>
+    <td><%= note_item.level_count %></td>
+    <td><%= link_to 'Show', note_item %></td>
+    <td><%= link_to 'Edit', edit_note_item_path(note_item) %></td>
+    <td><%= link_to 'Destroy', note_item, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Note item', new_note_item_path %>

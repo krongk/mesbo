@@ -1,5 +1,6 @@
 # encoding: utf-8
 ActiveAdmin.register ResourceItem do
+  menu :parent => "资源中心"
   scope :"产品-洗涤设备"
   scope :"产品-干洗用品"
   scope :"产品-水洗用品"
