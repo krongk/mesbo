@@ -13,6 +13,7 @@ class CreateNoteItems < ActiveRecord::Migration
       t.string :contact_email
       t.string :contact_qq
       t.string :contact_other
+      t.image  :string
       t.string :admin_password
       t.boolean :is_checked
       t.string :is_deleted

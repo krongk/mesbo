@@ -3,7 +3,7 @@
 
     //tinymce-jquery 方式
     $('textarea').tinymce({
-      theme: 'advanced',
+      theme: 'simple',
       language : "zh-cn"
     });
   });
@@ -13,8 +13,8 @@
     tinyMCE.init({
       mode: 'textareas',
       language : "zh-cn",
-      //theme: 'simple'
-      theme: 'advanced'
+      theme: 'simple'
+      //theme: 'advanced'
 
     });
   }

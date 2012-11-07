@@ -1,0 +1,40 @@
+<style>
+  .table { width:100%; border-collapse:collapse; margin-bottom:0.5em; border-top:2px #ccc solid; border-bottom:2px #666 solid; }
+  .table caption { font-variant:small-caps; }
+  .table.full { width:100%; }
+  .table.fixed { table-layout:fixed; }
+
+  .table th, .table td { padding: 0.4em; }
+  .table thead th { color:#000; border-bottom:2px #800 solid; }
+  .table tbody th { background:#e0e0e0; color:#333; }
+  .table tbody th[scope="row"], tbody th.sub { background:#f0f0f0; }
+
+  .table tbody th { border-bottom:1px solid #fff; text-align:left; }
+  .table tbody td { border-bottom:1px solid #eee; }
+
+  .table tbody tr:hover th[scope="row"],
+  .table tbody tr:hover tbody th.sub { background:#f0e8e8; }
+  .table tbody tr:hover td { background:#fff8f8; }
+  .table .title a{
+    font-size: 110%;
+    color: blue;
+  }
+</style>
+
+<table class="table">
+<% note_items.each do |note_item| %>
+  <tr>
+    <td width="60"><%= link_to note_item.note_cate.name, note_cate_path(note_item.note_cate) %></td>
+    <td><%= note_item.address.to_s.truncate(14) %></td>
+    <td><%= note_item.contact_name %></td>
+    <td class="title"><%= link_to note_item.title.to_s.truncate(26), note_item_path(note_item) %></td>
+  </tr>
+<% end %>
+</table>
+
+<% paginate_off ||= false %>
+<% unless paginate_off %>
+  <div class='apple_pagination'>
+    <%= will_paginate note_items, :next_label => "下一页", :prev_label => "上一页" %>
+  </div>
+<% end %>

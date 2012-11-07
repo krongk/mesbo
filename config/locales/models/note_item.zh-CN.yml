@@ -19,7 +19,9 @@ zh-CN:
         contact_other: 其它联系方式
         admin_password: 管理密码
         is_checked: 是否审核
-        is_deleted: 是否显示
+        is_deleted: 是否隐藏
+        image_path: 图片路径
+        image_url: 图片网络地址
         level_count: 排序值
     errors:
       note_item: !!null 

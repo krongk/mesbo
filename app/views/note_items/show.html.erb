@@ -1,99 +1,44 @@
+<% title @note_item.title %>
+<% meta_keywords @note_item.title %>
+<% nav_bar [['首页', '/'],['行业分类信息', '/note_cates'],[@note_item.note_cate.name, '/note_cates/'+ @note_item.id.to_s]] %>
+<% side_news @note_item.note_cate.name %>
+<% side_nav @note_item.note_cate.name, 'note' %>
+
 <div class="main_corner">
   <%=image_tag asset_path("show_06.jpg"), :width =>'660px' %>
   <div class="content">
+    
+    <p id="notice"><%= notice %></p>
+     <a id='sub_a_42_1' style="float: right; position: relative; overflow: hidden; margin: 0 20px 20px 0;" href='/note_items/new'><img src="/assets/note_btn.png"/></a>
     <h2 style='font-size: 24px; font-weight: 600; padding: 20px 0; border-bottom: dotted 2px #333;'>
-      洗衣行业分类信息汇总
+      <%= @note_item.title %>
     </h2>
+    <table width="100%">
+      <tr><td width="200px">[分类：<%= link_to @note_item.note_cate.name, note_cate_path(@note_item.note_cate)%>]</td>
+      <td align="right">发布时间： <%= @note_item.updated_at.strftime("%Y-%d-%d") %></td>
+      </tr>
+    </table>
 
+    <div class="note_section">
+      <h3>联系方式</h3>
+      <div class="note_content">
+        联系人：&nbsp;<%= @note_item.contact_name %><br/>
+        联系电话： &nbsp;<%= get_note_item_phone(@note_item.contact_phone) %> <br/>
+        其它联系：&nbsp;
+          <%= get_note_item_phone(@note_item.contact_other) %><br/>
+          <%= @note_item.contact_email %>
+          <%= @note_item.contact_qq %><br/>
+        区域：&nbsp;&nbsp; <%= @note_item.city.name %>,<%= @note_item.district.name %>  &nbsp;&nbsp; <%= @note_item.address %>
+      </div>
+    </div>
 
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Note cate:</b>
-  <%= @note_item.note_cate %>
-</p>
-
-<p>
-  <b>Region:</b>
-  <%= @note_item.region %>
-</p>
-
-<p>
-  <b>City:</b>
-  <%= @note_item.city %>
-</p>
-
-<p>
-  <b>District:</b>
-  <%= @note_item.district %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @note_item.address %>
-</p>
-
-<p>
-  <b>Title:</b>
-  <%= @note_item.title %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @note_item.description %>
-</p>
-
-<p>
-  <b>Contact name:</b>
-  <%= @note_item.contact_name %>
-</p>
-
-<p>
-  <b>Contact phone:</b>
-  <%= @note_item.contact_phone %>
-</p>
-
-<p>
-  <b>Contact email:</b>
-  <%= @note_item.contact_email %>
-</p>
-
-<p>
-  <b>Contact qq:</b>
-  <%= @note_item.contact_qq %>
-</p>
-
-<p>
-  <b>Contact other:</b>
-  <%= @note_item.contact_other %>
-</p>
-
-<p>
-  <b>Admin password:</b>
-  <%= @note_item.admin_password %>
-</p>
-
-<p>
-  <b>Is checked:</b>
-  <%= @note_item.is_checked %>
-</p>
-
-<p>
-  <b>Is deleted:</b>
-  <%= @note_item.is_deleted %>
-</p>
-
-<p>
-  <b>Level count:</b>
-  <%= @note_item.level_count %>
-</p>
-
-
-<%= link_to 'Edit', edit_note_item_path(@note_item) %> |
-<%= link_to 'Back', note_items_path %>
-
-
-     
+    <div class="note_section">
+      <h3>详细信息</h3>
+      <div class="note_content">
+        <%= simple_format @note_item.description  unless @note_item.description.blank? %>
+      </div>
+    </div>
+ 
   </div>
    <%=image_tag asset_path("show_08.jpg"), :width =>'660px' %>
 </div>

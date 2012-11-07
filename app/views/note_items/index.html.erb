@@ -1,53 +1,29 @@
-<h1>Listing note_items</h1>
+<% title '分类信息' %>
+<% meta_keywords '分类信息' %>
+<% nav_bar [['首页', '/'],['分类信息', '/note_cates']]%>
+<% side_news '行业分类信息' %>
+<% side_nav '行业分类信息', 'note' %>
 
-<table>
-  <tr>
-    <th>Note cate</th>
-    <th>Region</th>
-    <th>City</th>
-    <th>District</th>
-    <th>Address</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Contact name</th>
-    <th>Contact phone</th>
-    <th>Contact email</th>
-    <th>Contact qq</th>
-    <th>Contact other</th>
-    <th>Admin password</th>
-    <th>Is checked</th>
-    <th>Is deleted</th>
-    <th>Level count</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="main_corner">
+  <%=image_tag asset_path("show_06.jpg"), :width =>'660px' %>
+  <div class="content">
+  <a id='sub_a_42_1' style="float: right; position: relative; overflow: hidden; margin: 0 20px 20px 0;" href='/note_items/new'><img src="/assets/note_btn.png"/></a>
+  <h1>分类信息</h1>
+  <br/>
+  <hr class="black"/>
 
-<% @note_items.each do |note_item| %>
-  <tr>
-    <td><%= note_item.note_cate %></td>
-    <td><%= note_item.region %></td>
-    <td><%= note_item.city %></td>
-    <td><%= note_item.district %></td>
-    <td><%= note_item.address %></td>
-    <td><%= note_item.title %></td>
-    <td><%= note_item.description %></td>
-    <td><%= note_item.contact_name %></td>
-    <td><%= note_item.contact_phone %></td>
-    <td><%= note_item.contact_email %></td>
-    <td><%= note_item.contact_qq %></td>
-    <td><%= note_item.contact_other %></td>
-    <td><%= note_item.admin_password %></td>
-    <td><%= note_item.is_checked %></td>
-    <td><%= note_item.is_deleted %></td>
-    <td><%= note_item.level_count %></td>
-    <td><%= link_to 'Show', note_item %></td>
-    <td><%= link_to 'Edit', edit_note_item_path(note_item) %></td>
-    <td><%= link_to 'Destroy', note_item, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+  <div class="news_list">
+  <% @note_cates.each do |note_cate| %>
+    <ul>
+      <li><b><%= link_to note_cate.name, note_cate_path(note_cate) %>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "查看更多>>>", note_cate_path(note_cate) %></b>
+        <%= render :partial => 'note_items', :locals => {:note_items => NoteItem.recent(5, note_cate.id), :paginate_off => true} %>
+      </li>
+    </ul>
+  <% end %>
+  </div>
 
-<br />
-
-<%= link_to 'New Note item', new_note_item_path %>
+  <hr class="black"/>
+  <%= link_to '返回', note_items_path %>
+ </div>
+ <%=image_tag asset_path("show_08.jpg"), :width =>'660px' %>
+</div>

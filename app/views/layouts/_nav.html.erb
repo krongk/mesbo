@@ -84,6 +84,21 @@
       <a id='sub_a_42_1' class='sub_a' href='/pages/pige:qiche'>汽车真皮洗护</a>
       <a id='sub_a_42_1' class='sub_a' href='/pages/pige:shafa'>真皮沙发洗护</a>
       <a id='sub_a_42_1' class='sub_a' href='/pages/pige:pixie'>皮包皮鞋洗护</a>
-      </li>
+    </li>
+    <li id="sub_top_menu_8" class="sub_kwick">
+      <% index = 0 %>
+      <% NewsCate.all.each do |item| %>
+        <% if (index += 1)%10 == 0 %>
+          <br/>
+        <% end %>
+        <%=link_to item.name, news_cate_path(item), :class => 'sub_a' %>
+      <% end %>
+    </li>
+    <li id="sub_top_menu_9" class="sub_kwick">
+      <% NoteCate.all.each do |item| %>
+        <%=link_to item.name, note_cate_path(item), :class => 'sub_a' %>
+      <% end %>
+      <a id='sub_a_42_1' class='sub_a' style="float: right; position: relative; overflow: hidden; margin: 0 20px 20px 0;" href='/note_items/new'><img src="/assets/note_btn.png"/></a>
+    </li>
   </ul>
 </div>

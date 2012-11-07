@@ -83,22 +83,17 @@ $(document).ready(function() {
 	</td></tr>
 <% elsif style == 'no' %>
  	  省份：<%= select_tag("shop[region_id]", options_from_collection_for_select(Region.all, :id, :name, shop.region_id || 23), :id => "regions") %>
-  城市：<%= select_tag("shop[city_id]", options_from_collection_for_select(City.all, :id, :name, shop.city_id || 234), :id => "cities") %>
+    城市：<%= select_tag("shop[city_id]", options_from_collection_for_select(City.all, :id, :name, shop.city_id || 234), :id => "cities") %>
    区域：<%= select_tag("shop[district_id]", options_from_collection_for_select(District.all, :id, :name, shop.district_id || 3410), :id => "districts") %>
 
 <% else %>
 	<li>选择省份:</li>
 	<li>
-	  <select id="regions" name="shop[region_id]">
-	    <option value="1">请选择省份</option>
-	    <%= options_from_collection_for_select(Region.all, :id, :name) %>
-	  </select>
+	 <%= select_tag("shop[region_id]", options_from_collection_for_select(Region.all, :id, :name, shop.region_id || 23), :id => "regions") %>
 	</li>
 	<li>选择城市:</li>
 	<li>
-	    <select id="cities" name="shop[city_id]">
-	      <option value="1">请选择城市</option>
-	    </select>
+	  <%= select_tag("shop[city_id]", options_from_collection_for_select(City.all, :id, :name, shop.city_id || 234), :id => "cities") %>
 	</li>
 	 <li>选择地区:</li>
 	<li>

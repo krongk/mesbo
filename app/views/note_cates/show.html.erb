@@ -1,10 +1,21 @@
-<p id="notice"><%= notice %></p>
+<% title @note_cate.name %>
+<% meta_keywords @note_cate.name %>
+<% nav_bar [['首页', '/'],['行业分类信息', '/note_cates'],[@note_cate.name, '/note_cates/'+ @note_cate.id.to_s]] %>
+<% side_news @note_cate.name %>
+<% side_nav @note_cate.name, 'note' %>
 
-<p>
-  <b>Name:</b>
-  <%= @note_cate.name %>
-</p>
+<div class="main_corner">
+  <%=image_tag asset_path("show_06.jpg"), :width =>'660px' %>
+  <div class="content">
+    <a id='sub_a_42_1' style="float: right; position: relative; overflow: hidden; margin: 0 20px 20px 0;" href='/note_items/new'><img src="/assets/note_btn.png"/></a>
+    <h1>
+      <%= @note_cate.name %>
+    </h1>
 
-
-<%= link_to 'Edit', edit_note_cate_path(@note_cate) %> |
-<%= link_to 'Back', note_cates_path %>
+    <div class="news_list">
+        <%= render :partial => '/note_items/note_items', :locals => {:note_items => @note_items} %>
+    </div>
+    <br />
+  </div>
+   <%=image_tag asset_path("show_08.jpg"), :width =>'660px' %>
+</div>

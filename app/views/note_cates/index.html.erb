@@ -1,24 +1,31 @@
+<% title '分类信息' %>
+<% meta_keywords '分类信息' %>
+<% nav_bar [['首页', '/'],['分类信息', '/note_cates']]%>
+<% side_news '行业分类信息' %>
+<% side_nav '行业分类信息', 'note' %>
+
 <div class="main_corner">
   <%=image_tag asset_path("show_06.jpg"), :width =>'660px' %>
   <div class="content">
-    <h2 style='font-size: 24px; font-weight: 600; padding: 20px 0; border-bottom: dotted 2px #333;'>
-      洗衣行业分类信息汇总
-    </h2>
-    
-    <table>
-    <% @note_cates.each do |note_cate| %>
-      <tr>
-        <td><%= note_cate.name %></td>
-        <td><%= link_to 'Show', note_cate %></td>
-        <td><%= link_to 'Edit', edit_note_cate_path(note_cate) %></td>
-        <td><%= link_to 'Destroy', note_cate, confirm: 'Are you sure?', method: :delete %></td>
-      </tr>
-    <% end %>
-    </table>
-  
-     
+    <a id='sub_a_42_1' style="float: right; position: relative; overflow: hidden; margin: 0 20px 20px 0;" href='/note_items/new'><img src="/assets/note_btn.png"/></a>
+    <h1>分类信息</h1>
+    <br/>
+    <hr class="black"/>
+
+  <div class="news_list">
+  <% @note_cates.each do |note_cate| %>
+    <ul>
+      <li><b><%= link_to note_cate.name, note_cate_path(note_cate) %>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "查看更多>>>", note_cate_path(note_cate) %></b>
+        <ul style="margin:0; padding: 10px;">
+          <%= render :partial => '/note_items/note_items', :locals => {:note_items => NoteItem.recent(5, note_cate.id), :paginate_off => true} %>
+        </ul>
+      </li>
+    </ul>
+  <% end %>
   </div>
-   <%=image_tag asset_path("show_08.jpg"), :width =>'660px' %>
+
+  <hr class="black"/>
+  <%= link_to '返回', note_items_path %>
+ </div>
+ <%=image_tag asset_path("show_08.jpg"), :width =>'660px' %>
 </div>
-
-

@@ -1,3 +1,16 @@
 // Place all the styles related to the note_items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.field input{
+  width: 400px;
+}
+.field textarea{
+  width: 400px;
+}
+.note_section h3{
+  font-weight: 600px;
+  margin: 0;
+  padding: 5px 20px;
+  background: #ffcc00;
+}

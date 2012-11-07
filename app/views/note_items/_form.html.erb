@@ -2,7 +2,6 @@
 <script>
     $(document).ready(function(){
       $("#new_note_item").validate();
-      alert('aa');
     });
 </script>
 
@@ -21,11 +20,11 @@
 
   <div class="field">
     <%= f.label :note_cate %><br />
-    <%= f.text_field :note_cate %>
+    <%= select_tag("note_item[note_cate]", options_from_collection_for_select(NoteCate.all, :id, :name, 1), :id => "note_cate") %>
   </div>
   <div class="field">
     <br/>
-    <%=render :partial => "/shops/dropdown_region_city_district", :locals =>{:style => 'no'}%>
+    <%=render :partial => "/shops/dropdown_region_city_district", :locals =>{:style => 'li'}%>
   </div>
   <br/>
   <div class="field">
@@ -64,18 +63,7 @@
     <%= f.label :admin_password %><br />
     <%= f.text_field :admin_password %>
   </div>
-  <div class="field">
-    <%= f.label :is_checked %><br />
-    <%= f.check_box :is_checked %>
-  </div>
-  <div class="field">
-    <%= f.label :is_deleted %><br />
-    <%= f.text_field :is_deleted %>
-  </div>
-  <div class="field">
-    <%= f.label :level_count %><br />
-    <%= f.number_field :level_count %>
-  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

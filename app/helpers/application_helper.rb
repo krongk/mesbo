@@ -18,6 +18,14 @@ module ApplicationHelper
   	content_for(:meta_description){ meta_description}
   end
   
+  #58.com phone is a image url
+  def get_note_item_phone(str)
+    if str =~ /http:\/\//
+      %{<img src="#{str}" />}.html_safe
+    else
+      str
+    end
+  end
   #链接菜单导航，如：首页/关于我们
   #input: nav_bar [['首页', '/'], ['关于', '/about']]
   def nav_bar(bar_arr)
@@ -35,7 +43,7 @@ module ApplicationHelper
   #显示边栏导航
   # 有父级
   # 通过父级显示所有子栏目
-  # :style => ['page', 'news', 'product', 'shop']
+  # :style => ['page', 'news', 'product', 'shop', 'note']
   def side_nav(cate_name, style = 'page')
     str_arr = ["<ul class='side_nav'>"]
     case style
@@ -116,6 +124,16 @@ module ApplicationHelper
       str_arr << "<li><a href='/customers/new'>会员注册</a></li>"
       str_arr << "<li><a href='/customer_login'>会员登录</a></li>" 
       str_arr << "<li><a href='/orders/new'>在线预约</a></li>" 
+    when 'note'
+      str_arr << "<h2 class='parent'><img src='/assets/ico1.jpg'/>行业分类信息</h2>"
+      NoteCate.all.each do |cate|
+        if cate.name == cate_name
+          str_arr << "<li class='current'><a href='/note_cates/#{cate.id}'>#{cate.name}</a></li>" 
+        else
+          str_arr << "<li><a href='/note_cates/#{cate.id}'>#{cate.name}</a></li>" 
+        end
+      end
+      str_arr << "<li><a href='/note_items/new'>免费发布信息</a></li>" 
     else
       'other'
     end
