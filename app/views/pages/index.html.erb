@@ -1,30 +1,57 @@
 <% title "美德斯邦" %>
 <% meta_keywords "四川美德斯邦洗涤有限公司, 四川干洗连锁加盟，四川洗衣连锁品牌，四川洗衣加盟店,四川加盟连锁,四川连锁加盟,美德斯邦招商,四川干洗,四川干洗机,四川干洗店设备,四川洗衣店设备,四川干洗店加盟连锁,四川洗衣店加盟连锁"%>
-<% meta_description "四川美德斯邦洗涤有限公司的美德斯邦洗衣连锁为知名品牌,继承国际先进干洗设备和管理模式,成为目前中国中高端的干洗连锁加盟集团企业！覆盖互联网加盟干洗连锁创业项目人群的80%. 加盟热线：4000-300-389" %>
+<% meta_description "四川美德斯邦洗涤有限公司的美德斯邦洗衣连锁为知名品牌,继承国际先进干洗设备和管理模式,成为目前中国中高端的干洗连锁加盟集团企业！覆盖互联网加盟干洗连锁创业项目人群的80%. 加盟热线：400-028-1970" %>
+
 <% content_for :banner do %>
 <div id="banner">
   <div id="banner1" class="banner">
-    <%# image_tag asset_path("1_08.jpg"), :width => "980", :alt => "美德斯邦洗衣连锁" %>
-    <%= render :partial => "layouts/index_banner" %>
-    <div class="border_black_2_img">&nbsp;</div>
+
+  <div id="index_banner">
+    <p class="big_font"><a href="javascript:void(0);"></a></p>
+    <%#image_tag asset_path("index_banner.png"), :width => '960' %>
+    <div id="banner_english2" style="margin-bottom: -6px;">
+      <%=link_to image_tag(asset_path("home/search980x50.jpg")), "/pages/ensure:after_sale_service", :target => '_blank' %>
+    </div>
   </div>
+
   <div id="banner2" style="margin-top: -10px;">
     <%# image_tag asset_path("1_10.jpg"), :width => "960", :alt => "美德斯邦洗衣连锁" %>
     <table width="100%" border="0"><tr>
       <td width="12px">&nbsp;</td>
-      <td height="350" valign="middle">
-        <a href="/pages/12" target="_blank"><%= image_tag asset_path("1_10-3-1.png"), :alt => "美德斯邦洗衣连锁" %></a></td>
+      <td height="340" valign="middle">
+        <%=render :partial => 'layouts/slide_320_1', :locals => {:css => 'slide_320_1', :arr => [["home/0a-320x320.jpg", "/pages/12"],["home/0b-320x320.jpg", "/pages/topic_ad1"]]} %>
+      </td>
       <td width="12px">&nbsp;</td>
       <td>
-        <a href="/pages/topic_ad1" target="_blank"><%= image_tag asset_path("1_10-3-2.png"), :alt => "美德斯邦洗衣连锁" %></a></td>
+        <%=render :partial => 'layouts/slide_320_1', :locals => {:css => 'slide_320_2', :arr => [["home/0b-320x320.jpg", "/pages/topic_ad1"],["home/0c-320x320.jpg", "/pages/about:address"]]} %>
+      </td>
       <td width="12px">&nbsp;</td>
-      <td><a href="/pages/about:address" target="_blank"><%= image_tag asset_path("1_10-3-3.png"), :alt => "美德斯邦洗衣连锁" %></a></td>
+      <td>
+        <%=render :partial => 'layouts/slide_320_1', :locals => {:css => 'slide_320_3', :arr => [["home/0c-320x320.jpg", "/pages/about:address"], ["home/0a-320x320.jpg", "/pages/12"]]} %>
+      </td>
       <td width="12px">&nbsp;</td>
     </tr></table>
     <div class="border_black_2_img">&nbsp;</div>
   </div>
 </div>
+</div>
+<!---------------flow div start --------------------------------------------------------------------------------------------------------------------------------------------->
+ <%=render :partial => 'layouts/flow_div' %>
+<!---------------flow div end------------------------------------------------------------------------------------------------------------------------------------------------>
+
+<div style="float: left; width: 100%; display: block; margin: 0 0 20px 0;">
+  <div id="index_banner">
+   <!--  <p class="big_font"><a href="javascript:void(0);"></a></p> -->
+    <%#image_tag asset_path("index_banner.png"), :width => '960' %>
+    <div id="banner_english2" style="margin-bottom: -6px;">
+      <%=link_to image_tag(asset_path("home/search980x50.jpg")), "/pages/ensure:after_sale_service", :target => '_blank' %>
+    </div>
+  </div>
+</div>
+<br/><br/>
 <% end %>
+
+
 <% content_for :side_bar do %>
   <div class="corner_white">
    <%=image_tag asset_path("3_07.jpg"), :width => "250", :height => "14"%>
@@ -64,6 +91,8 @@
     <%=image_tag asset_path("3_11.jpg"), :width => "250", :height => "14"%>
    <!-- end .corner_white --></div>
 <% end %>
+
+
 <div>  
 <%=render :partial => "layouts/slide_show1" %>
  <div class="slider_index_right">
@@ -77,7 +106,8 @@
   </div>
 </div>
 <br/>
- <div style="margin:0; padding: 0;">
+
+ <div style="margin:0; padding: 0;" id="container2">
   
       <table width="670" border="0" cellspacing="0" cellpadding="0">
       <tr>
@@ -179,4 +209,4 @@
       </tr>
     </table>
       
-     </div>
+  </div>

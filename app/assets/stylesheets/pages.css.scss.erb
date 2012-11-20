@@ -7,14 +7,31 @@
 #scrollNews{height:110px;min-height:25px;line-height:25px;overflow:hidden;}
 #scrollNews li{height:25px;padding-left:0px;}
 
+.omero #container_pages {
+	width: 980px;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+	background-color: #fff;
+	margin: 0 auto;
+}
+
 .omero #container {
 	width: 980px;
+	height: 100%;
 	text-align: left; /* this overrides the text-align: center on the body element. */
 	background-color: #e6ebef;
 	margin: 0 auto;
 	border-right: solid 1px #dddddd;
 	border-left: solid 1px #dddddd;	
 }
+
+.omero #container2 {
+	text-align: left; /* this overrides the text-align: center on the body element. */
+	background-color: #e6ebef;
+	margin: 0 auto;
+	border-right: solid 1px #dddddd;
+	border-left: solid 1px #dddddd;	
+}
+
 .omero #header_banner {
 	margin: 0;
 	padding: 0;
@@ -198,16 +215,14 @@
 }
 .omero #mainContent {
 	margin: 0px;
-	padding: 30px 10px;
+	padding: 10px;
 }
 /**********banner*start**********/
 #banner{
-    background-color: #fff;
-	background-image: url(<%=asset_path("1_bander_bg.jpg")%>);
-	background-repeat: repeat-x;
+
 }
 #banner2{
-	background-color:  #e6ebef;
+	background-color:  #fff;
 	margin: 10px 0;
 	padding: 0;
 	text-align: center;
@@ -281,11 +296,12 @@
 }
 /******side bar*******/
 .omero #footer {
-	background-color: #494949;
-	background-image: url("<%=asset_path "footerbg.jpg" %>");
-	background-repeat: repeat-x;
-	height: 350px;
-	color: #999;
+	background-image: url("<%=asset_path "m_footer.jpg" %>");
+	background-repeat: no-repeat;
+	color: #ccc;
+}
+#footer a{
+	color: #666;
 }
 #footer h3{
 	font-weight: 500;
