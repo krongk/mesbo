@@ -5,7 +5,11 @@
     </div>
   </div>
   <div class="u_row2 transparent"><%#B%>
-    <%= image_tag asset_path("home/b190x190.jpg") %>
+    <% if is_ie? %>
+      <%= image_tag asset_path("home/b190x190.jpg"), :height => 185 %>
+    <% else %>
+      <%= image_tag asset_path("home/b190x190.jpg") %>
+    <% end %>
   </div>
   <div class="u_row2 transparent"><%#C%>
     <%#= image_tag asset_path("home/c190x190.jpg") %>
@@ -33,8 +37,12 @@
       <%#=render :partial => 'layouts/slider_zuopin', :locals => {:css => 'slider_zuopin_1', :arr => [1,2,3,4,5]} %>
         <%= image_tag asset_path("home/i290x290.jpg") %>
     </div>
-    <div class="u_row3 transparent"><%#M%>
-       <%= image_tag asset_path("home/l290x190.jpg") %>
+    <div class="u_row3 transparent" <% if is_ie? %> style="height: 180px;" <% end %>><%#M%>
+       <% if is_ie? %>
+        <%= image_tag asset_path("home/l290x190.jpg"), :height => 180 %>
+      <% else %>
+        <%= image_tag asset_path("home/l290x190.jpg") %>
+      <% end %>
     </div>
   </DIV>
   <div class="u_row2 transparent"><%#J%>
