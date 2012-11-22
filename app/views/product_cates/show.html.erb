@@ -32,6 +32,7 @@
   <h1>产品中心</h1>
   <hr class="black"/>
   <% (0..1).each_with_index do |index| %>
+    <% next if recent_product_items.size == 0 %>
     <div class="item">
       <div class="main_product_image" style="width:400px; height: 220px;">
         <%= link_to image_tag((recent_product_items[index].image_path || asset_path("product.jpg")), :width => "400px"), product_item_path(recent_product_items[index]) %></div>
@@ -43,6 +44,7 @@
     </div>
   <% end %>
 
+<% if recent_product_items.size > 3 %>
   <table width="96%">
   <tr><td width="50%" align="left" valign="top">
     <div class="main_product_image"  style="width:200px; height: 120px; margin-right: 10px;">
@@ -67,7 +69,8 @@
   </td></tr>
 
   </table>
-
+ <% end %>
+ 
 </div>
 <%=image_tag asset_path("show_08.jpg"), :width =>'463px' %>
 </div>
