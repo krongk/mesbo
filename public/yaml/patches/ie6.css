@@ -6,3 +6,23 @@
   width: 284px;
   height: 290px;
 }
+
+.form_search_footer{
+  height: 50px;
+  margin: 31px 0 0 10px;
+  display: block;
+}
+
+.form_search{
+  float: right;
+  margin: 13px 10px 0 0;
+}
+
+#m_header_nav {
+  display: block;
+  float: none;
+  position: relative;
+  z-index: 100;
+  height: 50px;
+  width: 980px;
+}

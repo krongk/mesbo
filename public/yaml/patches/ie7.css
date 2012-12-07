@@ -16,3 +16,18 @@
     margin: 0;
     display: block;
 }
+
+.form_search_footer{
+  height: 50px;
+  margin: 30px 0 0 10px;
+  display: block;
+}
+
+.form_search{
+  float: right;
+  margin: 13px 12px 0 0;
+}
+
+#m_header_nav {
+  display: block;
+}

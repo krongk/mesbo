@@ -180,7 +180,7 @@ $(document).ready(function(){
      <%= yield %>
     </td>
     <td width="10px" class="right_border">&nbsp;</td>
-    <td align="right" valign="top" width="270" bgColor="#e6ebef">
+    <td align="right" valign="top" width="270">
       <div id="sidebar">
          <% if request[:controller] == 'pages' && request[:action] == 'index' %>
            <%= yield :side_bar %><!--for index page-->

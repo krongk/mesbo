@@ -1,23 +1,54 @@
+<script type="text/javascript">
+  $(function() {
+      var offset = $("#m_header_nav").offset();
+      var topPadding = -50;
+      $(window).scroll(function() {
+          if ($(window).scrollTop() > offset.top) {
+              $("#m_header_nav").stop().animate({
+                  marginTop: $(window).scrollTop() - offset.top + topPadding
+              });
+          } else {
+              $("#m_header_nav").stop().animate({
+                  marginTop: -50
+              });
+          };
+      });
+  });
+</script>
+
 <style type="text/css">
-#container {
-  background-color: #CCC;
-  height: 600px;
+#m_header_top {
   width: 980px;
+  margin: 0 auto;
 }
-#m_header {
+#m_header_nav {
+  float: left;
+  position: absolute;
+  z-index: 100;
   height: 50px;
   width: 980px;
   margin: 0 auto;
+  margin-top: -50px;
   padding: 0;
   background-image: url(/assets/home/nav980x50.png);
   background-repeat: no-repeat;
   background-position: left top;
 }
-#m_nav a {
+#m_header_nav a {
   font-family: "微软雅黑";
   font-size: 14px;
   color: #FFF;
   text-decoration: none;
+}
+#m_header_container {
+  height: 200px;
+  width: 100%;
+  background-image: url(/assets/m_header_bg.jpg);
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 0;
 }
 #m_header_flash {
   margin: 0 auto;
@@ -25,36 +56,60 @@
   height: 200px;
   width: 980px;
 }
-#m_header_container {
-  height: 250px;
-  width: 100%;
-  background-image: url(/assets/m_header_bg.jpg);
-  background-repeat: repeat-x;
-  background-position: left bottom;
+#login_div{
+  background-color: #a9a9a9;
+  width: 980px;
   margin: 0 auto;
-  padding: 0;
+  margin-top: 2px;
+}
+.login_reg{
+  margin: 2px 0;
+}
+.login_reg a {
+  padding: 4px 10px;
+  margin: 0;
+  background-color: #ddd;
+}
+.login_reg a:hover {
+  color: #cc0000;
+  padding: 4px 10px;
+  margin: 0;
+  background-color: #fff;
 }
 </style>
+<div id="m_header_top">
+<div id="m_header_nav">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="15%" height="50px"><a href="/pages" style="display: block; padding: 5px 10px;">&nbsp;</a></td>
+      <td width="13%" align="center"><a href="/pages/about" target="_blank">关于美德斯邦</a></td>
+      <td width="7%"><a href="/pages/join" target="_blank">加盟合作</a></td>
+      <td width="7%"><a href="/shops" target="_blank">门店分布</a></td>
+      <td width="7%"><a href="/pages/pige" target="_blank">皮革护理</a></td>
+      <td width="8%"><a href="/product_cates" target="_blank">产品中心</a></td>
+      <td width="7%"><a href="/note_cates" target="_blank">同城信息</a></td>
+      <td width="7%"><a href="/pages/customer" target="_blank">我要洗衣</a></td>
+      <td width="19%">&nbsp;</td>
+      <td width="10%">&nbsp;</td>
+    </tr>
+  </table>
+</div>
+</div>
 <div id="m_header_container">
-  <div id="m_header">
-    <div id="m_nav">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td width="15%" height="50px">&nbsp;</td>
-          <td width="13%" align="center"><a href="/pages" target="_blank">关于美德斯邦</a></td>
-          <td width="7%"><a href="/pages/join" target="_blank">加盟合作</a></td>
-          <td width="7%"><a href="/shops" target="_blank">门店分布</a></td>
-          <td width="7%"><a href="/pages/pige" target="_blank">皮革护理</a></td>
-          <td width="8%"><a href="/product_cates" target="_blank">产品中心</a></td>
-          <td width="7%"><a href="/note_cates" target="_blank">同城信息</a></td>
-          <td width="7%"><a href="/pages/customer" target="_blank">我要洗衣</a></td>
-          <td width="19%">&nbsp;</td>
-          <td width="10%">&nbsp;</td>
-        </tr>
-      </table>
-    </div>
-    <div id="m_header_flash">
-      <%= play_flash asset_path("m_flash/banner980x200.swf"), :width => '980', :height => '200' %>
-    </div>
-   </div>
+  <div id="m_header_flash">
+    <%= play_flash asset_path("m_flash/banner980x200.swf"), :width => '980', :height => '200' %>
+  </div>
+  <div id="login_div">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+     <tr>
+       <td align="center" valign="middle" height="30">
+         <div class="login_reg">
+           <a href="/customer_login">会员登录</a>&nbsp;&nbsp;
+           <a href="/customers/new">我要注册</a>&nbsp;&nbsp;
+           <a href="/pages/about:address">联系我们</a>
+         </div>
+       </td>
+     </tr>
+   </table>
+  </div>
  </div>
