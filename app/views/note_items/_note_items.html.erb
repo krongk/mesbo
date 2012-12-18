@@ -24,7 +24,7 @@
 <table class="table">
 <% note_items.each do |note_item| %>
   <tr>
-    <td width="60"><%= link_to note_item.note_cate.name, note_cate_path(note_item.note_cate) %></td>
+    <td width="65"><%= link_to note_item.note_cate.name, note_cate_path(note_item.note_cate) %></td>
     <td><%= note_item.address.to_s.truncate(14) %></td>
     <td><%= note_item.contact_name %></td>
     <td class="title"><%= link_to note_item.title.to_s.truncate(26), note_item_path(note_item) %></td>

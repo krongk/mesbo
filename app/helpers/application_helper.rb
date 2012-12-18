@@ -29,7 +29,7 @@ module ApplicationHelper
   #链接菜单导航，如：首页/关于我们
   #input: nav_bar [['首页', '/'], ['关于', '/about']]
   def nav_bar(bar_arr)
-  	strs = ['<div id="nav_bar">']
+  	strs = ['<div id="nav_bar"><img src="/assets/ico1.jpg">&nbsp;&nbsp;']
   	bar_arr.each do |nav|
   	  strs << link_to(nav[0], nav[1], :class=> 'nav_bar_link')
       strs << " / "

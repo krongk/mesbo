@@ -6,7 +6,6 @@
 <% side_nav @page.title, 'page' %>
 
 <div class="main_corner">
-  <%=image_tag asset_path("show_06.jpg"), :width =>'660px' %>
   <div class="content">
   	  <h2 style='font-size: 24px; font-weight: 600; padding: 20px 0; border-bottom: dotted 2px #333;'><%=@page.title %></h2>
       
@@ -27,5 +26,4 @@
       <% end %>
       <%= @page.body.html_safe unless @page.body.blank?%>
   </div>
-   <%=image_tag asset_path("show_08.jpg"), :width =>'660px' %>
 </div>

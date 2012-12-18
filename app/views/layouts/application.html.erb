@@ -122,7 +122,6 @@ $(document).ready(function(){
   });
 
   $('#slide_290_2').cycle();
-  $('#slide_480_1').cycle();
   $('#slide_320_1').cycle({ 
     fx:      'fade', 
     speed: 2000,
@@ -166,36 +165,32 @@ $(document).ready(function(){
  </div> -->
   
   <%= yield :banner %>
- 
- <% if request[:controller] == 'pages' && request[:action] == 'index' %> 
+
   <div id="mainContent">
- <% else %>
-   <div id="mainContent">
- <% end %>
+
    <table width="100%" height="600" border="0" cellspacing="0" cellpadding="0">
+    <tr><td height="10px">&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
   <tr>
     <td width="690px" align="left" valign="top">
      <%if flash[:notice]%><div class="notice"><%=flash[:notice]%></div><%end%>
      <%= yield :nav_bar %>
      <%= yield %>
     </td>
-    <td width="10px" class="right_border">&nbsp;</td>
+    <td width="20px" class="left_border">&nbsp;&nbsp;</td>
     <td align="right" valign="top" width="270">
       <div id="sidebar">
          <% if request[:controller] == 'pages' && request[:action] == 'index' %>
            <%= yield :side_bar %><!--for index page-->
          <% else %>
-           <div style="margin:0; padding:0; text-align: right;">
-             <%= play_flash asset_path("m_flash/banner285x218.swf"), :width => '285', :height => '218'%>
+           <div>
+             <%= play_flash asset_path("m_flash/banner285x218.swf"), :width => '285', :height => '215'%>
            </div>
-           <div class="corner_white">
-             <%=image_tag asset_path("3_07.jpg"), :width => "250", :height => "14"%>
-              <div class="bg_white">
+           <div>
+              <div>
                <%= yield :side_nav %><!--for detail page-->
                <%# render :partial => 'layouts/search_form', :locals => {:css_class => "search1"} %>
                <%= yield :side_news %><!--for detail page -->
                <!-- end .bg_white --></div>
-               <%=image_tag asset_path("3_11.jpg"), :width => "250", :height => "14"%>
           <!-- end .corner_white --></div>
 
      <!--         <div class="side_box">
@@ -233,7 +228,6 @@ $(document).ready(function(){
             </div>
           </div>
          <% end %>
-      </div>
     </td>
   </tr>
  </table>

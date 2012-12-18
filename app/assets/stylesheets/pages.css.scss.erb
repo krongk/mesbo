@@ -18,10 +18,8 @@
 	width: 980px;
 	height: 100%;
 	text-align: left; /* this overrides the text-align: center on the body element. */
-	background-color: #e6ebef;
 	margin: 0 auto;
-	border-right: solid 1px #dddddd;
-	border-left: solid 1px #dddddd;	
+	margin-top: 36px;
 }
 
 .omero #container2 {
@@ -222,7 +220,7 @@
 }
 .omero #mainContent {
 	margin: 0px;
-	padding: 10px;
+	padding: 0px;
 }
 /**********banner*start**********/
 #banner{
@@ -250,28 +248,10 @@
 }
 /**********banner*end**********/
 /******side bar*******/
-#sidebar {
-	text-align: left;
+#sidebar{
 	margin: 0;
-	padding: 0 0 0 5px;
-}
-
-.corner_white{
-	margin: 0px;
-	padding: 0px;
-}
-.corner_white .bg_white{
-	background-image: url(<%=asset_path("3_09.jpg")%>);
-	background-repeat: repeat-y;
-	margin: -6px 0 0 0 !important;
-	margin: -10px 0 0 0;
-	padding: 0 0 0 12px;
-}
-.black_bg_raw {
-	margin: 0px;
-	padding: 10px;
-	background-image: url(<%=asset_path("rightbg.jpg")%>);
-	background-repeat: no-repeat;
+	padding: 0;
+	text-align: left;
 }
 #side_news_list{
 	border-top: solid 2px #cc0000;
@@ -295,7 +275,7 @@
 /******side bar*******/
 #nav_bar{
 	padding: 0;
-	margin: 20px 25px 0 0;
+	margin: -5px 25px 0 0;
 	border-bottom: solid 2px #646464;
 }
 #nav_bar a{
@@ -303,7 +283,7 @@
 }
 /******side bar*******/
 .omero #footer {
-	background-image: url("<%=asset_path "m_footer.jpg" %>");
+	background: url("<%=asset_path "m_footer.jpg" %>") #1f1a17;
 	background-repeat: no-repeat;
 	color: #ccc;
 }
@@ -345,7 +325,7 @@
 	border-bottom-width: 2px;
 	border-bottom-style: dotted;
 	list-style-type: none;
-	margin: 0px;
+	margin: 0;
 	padding: 0;
 }
 .side_nav li a{
@@ -353,7 +333,8 @@
 	background-repeat: no-repeat;
 	background-position: left center;
 	margin: 0px;
-	padding: 2px 0 2px 20px;
+	padding: 0;
+	padding-left: 20px;
 	display: block;
 }
 .side_nav li a:hover{
@@ -384,8 +365,8 @@
 //======================side box slide show================================
 //======================side box slide show================================
 .side_box{
-	margin: 10px 0 10px 8px;
-	padding: 4px;
+	margin: 10px 0px;
+	padding: 0px;
 	background-color: #fff;
 }
 #slideshow1{
@@ -400,14 +381,16 @@
 }
 //======================main corner content======================
 .main_corner{
-	margin: 10px 0 0 0;
+	margin: 0;
 	padding: 0;
 }
 .main_corner .content{
-	margin: -6px 0 0 0;
-	padding: 20px;
-	width: 619px;
-	background-color: #ffffff;
+	margin: 0;
+	padding: 20px 25px 20px 0;
+}
+.content h1{
+	margin: 20px 0 -5px 0;
+	padding: 0;
 }
 .main_corner img{
 	overflow: hidden;
@@ -435,6 +418,24 @@
 	padding: 0px;
 	font-size: 14px;
 }
+
+.related_news{
+	margin: 5px 0;
+}
+.related_news li {
+	margin: 0;
+	padding: 0;
+}
+.related_news li a{
+	background-image: url("<%=asset_path('li_sq_black.gif')%>");
+	background-repeat: no-repeat;
+	background-position: left center;
+	margin: 0px;
+	padding: 0;
+	padding-left: 20px;
+	display: block;
+}
+
 .section img{
 	padding: 20px;
 }
