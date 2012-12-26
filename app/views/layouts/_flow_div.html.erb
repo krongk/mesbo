@@ -53,10 +53,10 @@
    <%=render :partial => 'layouts/slide_480_1' %>
   </div>
   <div class="u_row7 transparent"><%#M%>
-    <%= image_tag asset_path("home/m380x290.jpg") %> 
+    <%= image_tag asset_path("home/m380x290.jpg"), :width => "384px", :height => "290px" %> 
   </div>
-  <div class="u_row5 transparent"><%#N%>
-    <%= image_tag asset_path("home/n-5 290x290.jpg"), :width => "294px" %> 
+  <div class="u_row5 transparent" style="margin-left: 8px;"><%#N%>
+    <%= image_tag asset_path("home/n-5 290x290.jpg") %> 
     <%#=render :partial => 'layouts/slider_zuopin', :locals => {:css => 'slider_zuopin_2', :arr => [2,3,4,5,1]} %>
   </div>
   <div class="u_row2 transparent"><%#O%>
