@@ -1,8 +1,7 @@
 <div class="Ucontainer">
+<div class="Ucontent">
   <div class="u_row1 transparent"><%#A%>
-    <div class="Ucontent">
-      <%= image_tag asset_path("home/a290x384.jpg") %>
-    </div>
+    <%= image_tag asset_path("home/a290x384.jpg") %>
   </div>
   <div class="u_row2 transparent"><%#B%>
     <% if is_ie? %>
@@ -29,10 +28,10 @@
   <div class="u_row4 transparent"><%#G%>
     <%= image_tag asset_path("home/g93x190.jpg") %>
   </div>
-  <div class="u_row2 transparent" style="width: 189px;"><%#H%>
+  <div class="u_row2 transparent" style="width: 188px; height: 188px;"><%#H%>
     <%= image_tag asset_path("home/h190x190.jpg") %>
   </div>
-  <DIV style="float: left; width: 290px; height: 480px; margin: 0 4px 4px 0;">
+  <DIV style="float: left; width: 290px; height: 480px; margin: 0 8px 8px 0;">
     <div class="u_row5 transparent"><%#L%>
       <%#=render :partial => 'layouts/slider_zuopin', :locals => {:css => 'slider_zuopin_1', :arr => [1,2,3,4,5]} %>
         <%= image_tag asset_path("home/i290x290.jpg") %>
@@ -57,7 +56,7 @@
     <%= image_tag asset_path("home/m380x290.jpg") %> 
   </div>
   <div class="u_row5 transparent"><%#N%>
-    <%= image_tag asset_path("home/n-5 290x290.jpg") %> 
+    <%= image_tag asset_path("home/n-5 290x290.jpg"), :width => "294px" %> 
     <%#=render :partial => 'layouts/slider_zuopin', :locals => {:css => 'slider_zuopin_2', :arr => [2,3,4,5,1]} %>
   </div>
   <div class="u_row2 transparent"><%#O%>
@@ -86,11 +85,14 @@
   <div class="u_row8 transparent" style="margin-top: -98px;"><%#V%>
     <%= image_tag asset_path("home/v290x290.jpg") %> 
     <%#=render :partial => 'layouts/slider_zuopin', :locals => {:css => 'slider_zuopin_3', :arr => [3,4,5,1,2]} %></div>
-  <div class="u_row9 transparent"><%#W%>
-     <%= image_tag asset_path("home/w290x334.jpg") %> 
+  <div style="float: left; position: relative; width: 100%">
+    <div class="u_row9 transparent"><%#W%>
+       <%= image_tag asset_path("home/w290x334.jpg") %> 
+    </div>
+    <div class="u_row10 transparent"><%#X%>
+       <%= image_tag asset_path("home/x284x334.jpg") %> </div>
+    <div class="u_row11 transparent"><%#U%>
+       <%= image_tag asset_path("home/y386x334.jpg"), :width => '390px' %> </div>
   </div>
-  <div class="u_row10 transparent"><%#X%>
-     <%= image_tag asset_path("home/x284x334.jpg") %> </div>
-  <div class="u_row11 transparent"><%#U%>
-     <%= image_tag asset_path("home/y386x334.jpg") %> </div>
+</div>
 </div>

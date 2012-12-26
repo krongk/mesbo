@@ -9,18 +9,17 @@
   <div id="index_banner">
     <p class="big_font"><a href="javascript:void(0);"></a></p>
     <%#image_tag asset_path("index_banner.png"), :width => '960' %>
-    <div id="banner_english2">
-      <%#=link_to image_tag(asset_path("home/search980x50.jpg")), "/pages/ensure:after_sale_service", :target => '_blank' %>
-      <form class="form_search" name="form1" method="get" action="/news_items">
-        <input type="text" name="q" id="q" accesskey="a" size=28 height="12" style="padding: 2px 0;" />
-      </form>
-    </div>
+  </div>
+  <div id="banner_english2">
+    <%#=link_to image_tag(asset_path("home/search980x50.jpg")), "/pages/ensure:after_sale_service", :target => '_blank' %>
+    <form class="form_search" name="form1" method="get" action="/news_items">
+      <input type="text" name="q" id="q" accesskey="a" size=29 height="12" style="padding: 2px 0;" />
+    </form>
   </div>
 
   <div id="banner2" style="margin-top: -10px;">
     <%# image_tag asset_path("1_10.jpg"), :width => "960", :alt => "美德斯邦洗衣连锁" %>
     <table width="100%" border="0"><tr>
-      <td width="12px">&nbsp;</td>
       <td height="340" valign="middle">
         <%=render :partial => 'layouts/slide_320_1', :locals => {:css => 'slide_320_1', :arr => [["home/0a-320x320.jpg", "/pages/12"],["home/0b-320x320.jpg", "/pages/topic_ad1"]]} %>
       </td>
@@ -32,7 +31,6 @@
       <td>
         <%=render :partial => 'layouts/slide_320_1', :locals => {:css => 'slide_320_3', :arr => [["home/0c-320x320.jpg", "/pages/about:address"], ["home/0a-320x320.jpg", "/pages/12"]]} %>
       </td>
-      <td width="12px">&nbsp;</td>
     </tr></table>
     <div class="border_black_2_img">&nbsp;</div>
   </div>
@@ -49,7 +47,7 @@
     <div id="banner_english2">
       <%#=link_to image_tag(asset_path("home/search980x50.jpg")), "/pages/ensure:after_sale_service", :target => '_blank' %>
       <form class="form_search" name="form1" method="get" action="/news_items">
-        <input type="text" name="q" id="q" accesskey="a" size=28 height="12" style="padding: 2px 0;" />
+        <input type="text" name="q" id="q" accesskey="a" size=29 height="12" style="padding: 2px 0;" />
       </form>
     </div>
   </div>

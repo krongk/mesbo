@@ -7,14 +7,17 @@
     text-align: center;
     valign: middle;
     font-size: 16px;
-    margin: 2px;
+    margin: 4px;
     padding: 0px;
 } 
 .Ucontainer {
-  width: 980px;
+  width: 1000px;
   margin: 0 auto;
 }
 .Ucontent{
+  margin-left: -4px;
+  float: left;
+  position: relative;
 }
 .Ucontainer .u_row1 {
   background: #f4e9ca;
@@ -24,7 +27,6 @@
 
 }
 .Ucontainer .u_row2 {
-  background-color: #99cccc;
   float: left;
   height: 190px;
   width: 190px;
@@ -81,7 +83,7 @@
 .Ucontainer .u_row11{
   background-color: #eecc88;
   float: left;
-  width: 386px;
+  width: 340px;
   height: 334px;
 }
 #slide_190_1, #slide_190_2, #slide_190_3, #slide_190_4, #slide_190_5, #slide_190_6{
