@@ -1,6 +1,8 @@
 class NewsItemsController < InheritedResourcesBase
   before_filter :authenticate_admin_user!, :except => [:index, :show]
 
+  caches_page :index, :show
+  
   def index
   	#for search
   	if params[:q]

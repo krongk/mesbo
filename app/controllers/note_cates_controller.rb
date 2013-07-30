@@ -2,6 +2,8 @@
 class NoteCatesController < InheritedResources::Base
   before_filter :authenticate_admin_user!, :except => [:index, :show]
 
+  caches_page :index, :show
+  
   def show
     @note_cate = NoteCate.find_by_name(params[:name])
     @note_cate = NoteCate.find_by_id(params[:id]) if @note_cate.nil?

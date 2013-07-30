@@ -1,4 +1,11 @@
 RailsOnWeb::Application.routes.draw do
+  get 'product_cates/page/:page', to: 'product_cates#index'
+  get 'product_cates/:id/page/:page', to: 'product_cates#show'
+  get 'product_items/page/:page', to: 'product_items#index'
+  get 'news_cates/page/:page', to: 'news_cates#index'
+  get 'news_cates/:id/page/:page', to: 'news_cates#show'
+  get 'news_items/page/:page', to: 'news_items#index'
+
   resources :note_items
 
   resources :note_cates
@@ -111,8 +118,8 @@ RailsOnWeb::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'home#index'
-  #root :to => 'pages#index'
+  #root :to => 'home#index'
+  root :to => 'pages#index'
 
   # See how all your routes lay out with "rake routes"
 
