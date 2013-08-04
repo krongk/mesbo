@@ -6,3 +6,11 @@ tmp/
 config/database.yml
 public/resource
 public/assets
+public/index.html
+public/news_items*
+public/news_cates*
+public/pages.html
+public/pages/
+public/note_cates.html
+public/note_cates/
+public/note_items/
