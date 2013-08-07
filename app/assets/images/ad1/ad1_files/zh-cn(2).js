@@ -1,0 +1,1 @@
+tinyMCE.addI18n("zh-cn.simple",{cleanup_desc:"清除无用代码",redo_desc:"恢复(Ctrl Y)",undo_desc:"撤销(Ctrl Z)",numlist_desc:"编号列表",bullist_desc:"项目列表",striketrough_desc:"删除线",underline_desc:"下划线(Ctrl U)",italic_desc:"斜体(Ctrl I)",bold_desc:"粗体(Ctrl B)"})

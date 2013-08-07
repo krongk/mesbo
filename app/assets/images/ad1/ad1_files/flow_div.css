@@ -1,0 +1,148 @@
+/* line 2, /var/www/mesbo/app/assets/stylesheets/flow_div.css.scss */
+.transparent {
+  /*      filter:alpha(opacity= 0.5);  
+        -moz-opacity: 0.5;  
+        -khtml-opacity: 0.5;  
+        opacity: 0.5; */
+  text-align: center;
+  valign: middle;
+  font-size: 16px;
+  margin: 4px;
+  padding: 0px;
+}
+
+/* line 13, /var/www/mesbo/app/assets/stylesheets/flow_div.css.scss */
+.Ucontainer {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* line 17, /var/www/mesbo/app/assets/stylesheets/flow_div.css.scss */
+.Ucontent {
+  margin-left: -4px;
+  float: left;
+  position: relative;
+}
+
+/* line 22, /var/www/mesbo/app/assets/stylesheets/flow_div.css.scss */
+.Ucontainer .u_row1 {
+  background: #f4e9ca;
+  float: left;
+  height: 382px;
+  width: 290px;
+}
+
+/* line 29, /var/www/mesbo/app/assets/stylesheets/flow_div.css.scss */
+.Ucontainer .u_row2 {
+  float: left;
+  height: 190px;
+  width: 190px;
+}
+
+/* line 34, /var/www/mesbo/app/assets/stylesheets/flow_div.css.scss */
+.Ucontainer .u_row3 {
+  background: #494949;
+  float: left;
+  height: 190px;
+  width: 290px;
+}
+
+/* line 40, /var/www/mesbo/app/assets/stylesheets/flow_div.css.scss */
+.Ucontainer .u_row4 {
+  background-color: #0066cc;
+  float: left;
+  width: 93px;
+  height: 190px;
+}
+
+/* line 46, /var/www/mesbo/app/assets/stylesheets/flow_div.css.scss */
+.Ucontainer .u_row5 {
+  background: #0096e2;
+  /*background-color: #79f679;*/
+  float: left;
+  width: 290px;
+  height: 290px;
+}
+
+/* line 53, /var/www/mesbo/app/assets/stylesheets/flow_div.css.scss */
+.Ucontainer .u_row6 {
+  background: #0096e2;
+  float: left;
+  width: 480px;
+  height: 190px;
+}
+
+/* line 59, /var/www/mesbo/app/assets/stylesheets/flow_div.css.scss */
+.Ucontainer .u_row7 {
+  background-color: #eecc88;
+  float: left;
+  width: 380px;
+  height: 290px;
+}
+
+/* line 65, /var/www/mesbo/app/assets/stylesheets/flow_div.css.scss */
+.Ucontainer .u_row8 {
+  background: #0099ff;
+  float: left;
+  width: 290px;
+  height: 290px;
+}
+
+/* line 71, /var/www/mesbo/app/assets/stylesheets/flow_div.css.scss */
+.Ucontainer .u_row9 {
+  background-color: #eecc88;
+  float: left;
+  width: 290px;
+  height: 334px;
+}
+
+/* line 77, /var/www/mesbo/app/assets/stylesheets/flow_div.css.scss */
+.Ucontainer .u_row10 {
+  background-color: #eecc88;
+  float: left;
+  width: 284px;
+  height: 334px;
+}
+
+/* line 83, /var/www/mesbo/app/assets/stylesheets/flow_div.css.scss */
+.Ucontainer .u_row11 {
+  background-color: #eecc88;
+  float: left;
+  width: 340px;
+  height: 334px;
+}
+
+/* line 89, /var/www/mesbo/app/assets/stylesheets/flow_div.css.scss */
+#slide_190_1, #slide_190_2, #slide_190_3, #slide_190_4, #slide_190_5, #slide_190_6 {
+  float: left;
+  width: 190px;
+  height: 190px;
+}
+
+/* line 94, /var/www/mesbo/app/assets/stylesheets/flow_div.css.scss */
+#slide_290_1 {
+  float: left;
+  width: 286px;
+  height: 190px;
+}
+
+/* line 99, /var/www/mesbo/app/assets/stylesheets/flow_div.css.scss */
+#slide_290_2 {
+  float: left;
+  width: 290px;
+  height: 190px;
+}
+
+/* line 104, /var/www/mesbo/app/assets/stylesheets/flow_div.css.scss */
+#slide_480_1 {
+  float: left;
+  width: 480px;
+  height: 190px;
+}
+
+/* line 109, /var/www/mesbo/app/assets/stylesheets/flow_div.css.scss */
+#slide_320_1, #slide_320_2, #slide_320_3 {
+  float: left;
+  width: 314px;
+  height: 320px;
+}

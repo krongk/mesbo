@@ -1,0 +1,77 @@
+/* line 5, /var/www/mesbo/app/assets/stylesheets/home.css.scss.erb */
+h2.red_h2 {
+  margin: 0px;
+  padding: 4px;
+  background-color: #666;
+  color: #fff;
+}
+
+/* line 11, /var/www/mesbo/app/assets/stylesheets/home.css.scss.erb */
+h2.red_h2 a {
+  color: #fff;
+}
+
+/* line 14, /var/www/mesbo/app/assets/stylesheets/home.css.scss.erb */
+h2.red_h2 a:hover {
+  color: #fff;
+}
+
+/* line 17, /var/www/mesbo/app/assets/stylesheets/home.css.scss.erb */
+h2.red_h2:hover {
+  margin: 0px;
+  padding: 4px;
+  background-color: #cc0000;
+  color: #fff;
+}
+
+/* line 24, /var/www/mesbo/app/assets/stylesheets/home.css.scss.erb */
+.toto {
+  font-family: "Comic Sans MS", cursive;
+  margin-right: 10px;
+}
+
+/* line 29, /var/www/mesbo/app/assets/stylesheets/home.css.scss.erb */
+#banner_english2 {
+  width: 980px;
+  height: 60px;
+  background-image: url("/assets/home/search980x50.jpg");
+  background-repeat: no-repeat;
+}
+
+/* line 35, /var/www/mesbo/app/assets/stylesheets/home.css.scss.erb */
+.form_search {
+  float: right;
+  margin: 13px 4px 0 0;
+}
+
+/* line 40, /var/www/mesbo/app/assets/stylesheets/home.css.scss.erb */
+.form_search_footer {
+  height: 50px;
+  margin: 31px 0 0 23px;
+}
+
+/* line 45, /var/www/mesbo/app/assets/stylesheets/home.css.scss.erb */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 52, /var/www/mesbo/app/assets/stylesheets/home.css.scss.erb */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 61, /var/www/mesbo/app/assets/stylesheets/home.css.scss.erb */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}

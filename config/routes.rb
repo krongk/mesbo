@@ -48,6 +48,7 @@ RailsOnWeb::Application.routes.draw do
   get "home/nav_img_and_jquery"
   get "home/nav_img_and_jquery2"
   get "home/ad_tv"
+  match "ad1" => "home#ad1"
   match "upload" => "resource_items#upload"
   match "customer_login" => "customers#customer_login"
   match "customer_login_create" => "customers#customer_login_create"

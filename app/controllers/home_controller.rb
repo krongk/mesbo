@@ -36,6 +36,10 @@ class HomeController < ApplicationController
   #show viedio
   def ad_tv
   end
+  def ad1
+    render "/home/ad1", :layout => nil
+  end
+  
 end
 
 
