@@ -6,7 +6,7 @@
 <meta name="robots" content="all" />
 <meta name="author" content="Mesbo" />
 <meta name="Copyright" content="Mesbo Lcd, All Rights Reserved." />
-<title><%= yield(:title) || '美德斯邦中高端洗涤连锁加盟服务商' %></title>
+<title>美德斯邦中高端洗涤连锁加盟服务商' %></title>
 <meta name="keywords" content="<%= yield(:meta_keywords) || '加盟,创业,洗衣加盟店,创业加盟,连锁,连锁加盟,招商,干洗,干洗机,干洗店设备,洗衣店设备,干洗店加盟连锁,洗衣店加盟连锁,成都干洗连锁品牌'%>" />
 <meta name="description" content="<%= yield(:meta_description) || '美德斯邦洗衣连锁为知名品牌,继承国际先进干洗设备和管理模式,成为目前中国中高端的干洗连锁加盟集团企业！覆盖互联网加盟干洗连锁创业项目人群的80%'%>" />
 
@@ -22,30 +22,27 @@
   <link href="/yaml/patches/ie7.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 <%= csrf_meta_tags %>
-<script type="text/javascript">
-$(document).ready(function(){
-  //slide show 
-  $('#slideshow1').sliders({ delay: 2500, speed: 500 });
-  $('#slideshow2').sliders({ delay: 4500, speed: 500,ease: 'swing' });
-
-  $('#slide_190_3').cycle({
-    fx: 'scrollDown', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
-    sync: true,
-    speed: 500,
-    timeout: 8000,
-    delay: -1000 
-  });
-  $('#slide_190_4').cycle({
-    fx: 'scrollRight', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
-    sync: 0,
-    speed: 500,
-    timeout: 8000,
-    delay: 2000 
-  });
-
-});
-</script>
-
+  <style type="text/css">
+    #jm_form {
+      font-size: 26px;
+      color: #fff;
+    }
+    #jm_form input {
+      padding: 5px;
+      border: 4px solid #900;
+      font-size: 16px;
+      line-height: 30px;
+      height: 40px;
+    }
+    #jm_btn{
+      height: 60px;
+      width: 120px;
+      color: #fff;
+      padding: 10px;
+      background-color: #900;
+      font-weight: 700;
+    }
+  </style>
 </head> 
 
 <body class="omero">
@@ -59,7 +56,42 @@ $(document).ready(function(){
 
   <div id="mainContent">
 
+<img src="/assets/ad1/ad1_02.png"  alt="MESBO" width="982" border="0" usemap="#Map">
+<map name="Map">
+  <area shape="rect" coords="50,410,410,632" href="http://www.mesbo.cn/jiamengs/new" target="_blank" alt="我要加盟">
+</map>
 
+  <img src="/assets/ad1/ad1_03.png" width="982" height="1002" alt="MESBO">
+  <a href="http://www.mesbo.cn/jiamengs/new"><img src="/assets/ad1/ad1_04.png" width="982" height="610" alt="MESBO"></a>
+
+  <div style="background:#11100c;">
+  <img src="/assets/ad1/ad1_05.png" width="982" alt="MESBO">
+  <a href="http://www.mesbo.cn/jiamengs/new"><img src="/assets/ad1/ad1_05.jpg" width="982" alt="MESBO"></a>
+  </div>
+  <a href="http://www.mesbo.cn">
+  <img src="/assets/ad1/ad1_07.png" width="982" height="797" alt="MESBO">
+  </a>
+
+  <div style="height: 1200px; background:url(/assets/ad1/ad1_09_bg.jpg)"><img src="/assets/ad1/ad1_09.jpg" width="982" alt="MESBO"><br/>
+         <div id="jm_form"> 
+         <h1>报名咨询</h1>
+         <br><hr><br>
+          <form accept-charset="UTF-8" action="/jiamengs" class="new_jiameng" id="new_jiameng" method="post">
+            &nbsp;&nbsp;
+            <label for="jiameng_name">姓名：</label>
+            <input id="jiameng_name" name="jiameng[name]" size="30" type="text">
+            
+          &nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="jiameng_phone">联系电话：</label>
+            <input id="jiameng_phone" name="jiameng[phone]" size="30" type="text">
+            
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input name="commit" type="submit" value="提交报名" id="jm_btn">
+        
+        </form>
+        <br><br>
+        <center><h1>400-028-1970</h1></center>
+  </div></div>
 
   <!-- end #mainContent --></div>
 

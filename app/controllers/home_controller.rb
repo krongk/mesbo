@@ -1,5 +1,6 @@
 #encoding: utf-8
 class HomeController < ApplicationController
+  caches_page :index, :ad1
   #show flash index as root
   def index
       render "/home/index", :layout => nil
