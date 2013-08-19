@@ -1,8 +1,4 @@
-/**
- * This css is I copy from /public/yaml/screen/forms.css
- * and modify it to spesify "manually form" on ActiveAdmin
- */
-
+@charset "utf-8";
 @media screen, projection
 {
   .yform {
