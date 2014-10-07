@@ -1,3 +1,8 @@
+if RUBY_VERSION #=~ /1.9/
+  Encoding.default_external = Encoding::UTF_8
+  Encoding.default_internal = Encoding::UTF_8
+end
+
 source 'http://ruby.taobao.org'
 
 gem 'rails', '3.1.0'
@@ -37,7 +42,7 @@ gem 'activeadmin', '0.3.4'
 gem "meta_search",    '>= 1.1.0.pre'
 
 #fix bug:  Could not find a JavaScript runtime -- just on linux system
-#gem 'therubyracer'
+gem 'therubyracer'
 
 #===WYSIWYG Editor
 gem 'tinymce-rails', '3.4.7'
