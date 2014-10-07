@@ -1,0 +1,1 @@
+tinyMCE.addI18n("zh-cn.paste_dlg",{word_title:"使用CTRL V粘贴文本到窗口中。",text_linebreaks:"保留断行",text_title:"使用CTRL V粘贴文本到窗口中。"})

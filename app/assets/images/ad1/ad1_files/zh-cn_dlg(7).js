@@ -1,0 +1,1 @@
+tinyMCE.addI18n("zh-cn.searchreplace_dlg",{findwhat:"查找目标",replacewith:"替换为",direction:"查找方向",up:"向上",down:"向下",mcase:"区分大小写",findnext:"查找下一个",allreplaced:"所有出现的字符均已替换。",searchnext_desc:"继续查找",notfound:"查找完成，未找到符合的文字。",search_title:"查找",replace_title:"查找/替换",replaceall:"全部替换",replace:"替换"})
